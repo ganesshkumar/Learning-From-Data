@@ -25,7 +25,7 @@ class Line:
       sign = -1 if random.random() > 0.5 else 1
       x = sign * random.random()
       y = self.__solve(x)
-      self.sample.append((x,y))
+      self.sample.append((x,self.__sign(y)))
     return self.sample
 
   def get_sample(self, n):
@@ -35,3 +35,6 @@ class Line:
     ''' Solve the line equation for given x '''
     y = (self.slope * x) + self.intercept
     return y
+
+  def __sign(self, n):
+    return 1 if n > 0 else -1 if n < 0 else 0
