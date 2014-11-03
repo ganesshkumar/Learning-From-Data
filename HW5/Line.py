@@ -17,6 +17,7 @@ class Line:
 
     self.slope = (positive_side - negative_side)/2
     self.intercept = positive_side - self.slope
+    print "Slope=", self.slope, ":Intercept=", self.intercept
 
   def generate_sample(self, n):
     ''' Genearte n samples from the line equation '''
